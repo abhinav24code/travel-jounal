@@ -1,0 +1,116 @@
+function TempName() {
+  return (
+    <>  
+      <Header />
+      <Main />
+    </>
+  );
+}
+
+// ✅ Define the Header component properly
+function Header() {
+  return (
+    <header>
+     
+      <img src="/src/assets/react.svg" width="60px" alt="React Logo"/>
+      <h2>ReactFacts</h2>
+    </header>
+  );
+}
+
+// ✅ Define the Main component properly
+function Main() {
+  return (
+    <main>
+      <h1>Fun facts about React</h1>
+      <ul className="fun">
+        <li>Was released in 2013</li>
+        <li>Was originally created by Jordan Walke</li>
+        <li>Has well over 100K stars on GitHub</li>
+        <li>Is maintained by Meta</li>
+        <li>Powers thousands of enterprise apps, including mobile apps</li>
+      </ul>
+    </main>
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: rgb(48, 46, 46);
+  color: white;
+  
+
+}
+ul {
+  height: 100vh;
+  padding-top: 40px;
+  padding-left: 60px;
+  
+}
+ul::before {
+  content: "";
+  background: url("/src/assets/react.svg") no-repeat center;
+  background-size: contain;
+  width: 400px;   /* Adjust size */
+  height: 400px;
+  position: absolute;
+  left: 440px;  /* Adjust position */
+  top: 55%;
+  transform: translateY(-50%);
+  opacity: 0.5;  /* Adjust transparency */
+  
+}
+
+ul li {
+  font-size: large;
+  padding: 10px;
+  font-weight: bold;
+  
+}
+header{
+  height: 15vh;
+}
+main h1 {
+  padding-left: 25px;
+  padding-top: 55px;
+  font-size: 3.4rem;
+}
+header {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  padding-left: 30px;
+  background-color: black;
+  color: rgb(109, 197, 227);
+}
+
+
+
+
+PROJECT-2
+
+<div className="container">
+        <img src={props.img} alt="" className="image" />
+        <div className="info">
+          <div className="location">
+            <div className="country">
+            <img src="https://cdn.hugeicons.com/icons/location-01-solid-rounded.svg" alt="" className="marker" />
+            <h4>{props.place1}</h4>
+            </div>
+            <a href={props.location1}> view on Google Maps </a>
+            
+          </div>
+          <h1>{props.name}</h1>
+          <h4 className="dates"> 1 Feb, 2025 - 24 Feb, 2021</h4>
+          <p className="description">
+          {props.description1}
+           
+          </p>
+        </div>
+      </div>
+      

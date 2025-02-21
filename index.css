@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+/*Header*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #4ac0d6, #ff6a00); /* Soft teal & coral blend */
+  height: 70px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Lighter shadow for depth */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Logo Animation */
+header img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate Logo + Slight Scale Effect on Hover */
+header:hover img {
+  transform: rotate(8deg) scale(1.1);
+}
+
+/* Header Hover Effects */
+header:hover {
+  background: linear-gradient(135deg, #3b92b6, #d65d5d); /* A touch darker and warmer */
+  box-shadow: 0px 4px 20px rgba(255, 106, 0, 0.3); /* Soft, warm glow */
+  transform: translateY(-3px); /* Slight floating effect */
+}
+
+
+
+/*Main*/
+
+/* Main Container */
+.card{ 
+  display: flex;
+  padding: 45px 0px 0px 205px;
+  gap: 30px;
+  padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background */
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  background-image: url('path_to_travel_image.jpg'); /* Replace with your travel image */
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+.card:hover {
+  background-color: rgba(254, 44, 84, 0.9);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  padding-bottom: 30px;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Marker */
+.marker {
+  color: rgb(208, 181, 181);
+  width: 15px;
+  height: 15px;
+  transition: color 0.3s ease;
+}
+.container:hover .marker {
+  color: white; /* Marker turns white on hover */
+}
+
+/* Location Section */
+.location {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding-top: 25px;
+  font-size: 16px;
+  color: rgb(255, 255, 255); /* Light text */
+}
+.country {
+  display: flex;
+  gap: 5px;
+}
+.location a {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.location a:hover {
+  color: rgb(254, 44, 84); /* Highlighted hover color */
+}
+
+/* Info Styling */
+.info h1 {
+  padding-top: 1px;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(50, 50, 50);
+  transition: font-size 0.3s ease;
+}
+
+.dates {
+  padding-top: 18px;
+}
+
+.info p {
+  padding-top: 9px;
+  font-weight: 400;
+  color: rgb(100, 100, 100);
+}
+
+.info {
+  padding-right: 190px;
+}
+
+/* Image Styling */
+.image {
+  height: 260px;
+  width: 173px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+.image:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .info {
+    padding-right: 20px;
+  }
+  .card {
+    display: flex;
+    padding: 75px 0px 0px 65px;
+    gap: 30px;
+    background-image: url('path_to_travel_image_small.jpg'); /* Use a smaller image for mobile */
+    background-size: cover;
+  }
+}
